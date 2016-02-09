@@ -40,7 +40,7 @@ $('form').on('submit', function(e){
           $("span").text("You now have #"+initial_money+"dollars");
         }
         else {
-          (initial_money) -= (bet);
+          initial_money -= bet;
           $("h2").text("Wrong guess!");
           $("span").text("You now have #"+initial_money+"dollars");
         }
@@ -48,6 +48,10 @@ $('form').on('submit', function(e){
   console.log(bet, guess);
 });
 
+$('button').on('click', function(e){
+  initial_money = 100;
+  $("span").text("You now have #"+initial_money+"dollars");
+});
 
 
 
